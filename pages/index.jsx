@@ -1,4 +1,3 @@
-// domian/
 import Head from "next/head";
 import { MongoClient } from "mongodb";
 
