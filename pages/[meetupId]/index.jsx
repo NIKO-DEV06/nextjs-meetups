@@ -4,7 +4,8 @@ import { Fragment } from "react";
 
 import MeetupDetail from "../../components/meetups/MeetupDetail";
 
-const apiUrl = process.env.NEXT_PUBLIC_REACT_APP_API_URL;
+const apiUrl = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.dtr7jkg.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
+
 const MeetupDetails = (props) => {
   return (
     <Fragment>
@@ -43,9 +44,7 @@ export async function getStaticProps(contex) {
   // fetch data for a single meetup'
 
   const meetupId = contex.params.meetupId;
-  const client = await MongoClient.connect(
-    "mongodb+srv://ayenikoemmanuel06:nikomongodb123@cluster0.dtr7jkg.mongodb.net/nextjsMeetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(apiUrl);
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
   const selectedMeetup = await meetupsCollection.findOne({

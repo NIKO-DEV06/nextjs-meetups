@@ -1,9 +1,9 @@
-# Ignore .env file
-.env
-.env.local
+
 # Ignore node_modules directory
 node_modules/
 
 # Ignore .next directory
 
 .next/
+
+next.config.js

@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 // /api/new-meetup
 // POST Requests
-const apiUrl = process.env.NEXT_PUBLIC_REACT_APP_API_URL;
+const apiUrl = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.dtr7jkg.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
 async function handler(req, res) {
   if (req.method === "POST") {
     const data = req.body;
