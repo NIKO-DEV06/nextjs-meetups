@@ -5,7 +5,7 @@ import { MongoClient } from "mongodb";
 import MeetupList from "../components/meetups/MeetupList";
 import { Fragment } from "react";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = process.env.NEXT_PUBLIC_REACT_APP_API_URL;
 const HomePage = (props) => {
   return (
     <Fragment>

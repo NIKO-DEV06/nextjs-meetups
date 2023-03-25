@@ -4,7 +4,7 @@ import { Fragment } from "react";
 
 import MeetupDetail from "../../components/meetups/MeetupDetail";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = process.env.NEXT_PUBLIC_REACT_APP_API_URL;
 const MeetupDetails = (props) => {
   return (
     <Fragment>
