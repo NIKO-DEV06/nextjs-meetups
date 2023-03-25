@@ -1,6 +1,6 @@
 # Ignore .env file
 .env
-
+.env.local
 # Ignore node_modules directory
 node_modules/
 
